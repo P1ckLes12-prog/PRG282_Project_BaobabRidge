@@ -4,15 +4,15 @@ using System.Text;
 
 namespace PRG282_Project_BaobabRidge
 {
-    internal class Animals
+    internal class Animal
     {
-        private string AnimalID { get; set; }
-        private string Name { get; set; }
-        private string Species { get; set; }
-        private int Age { get; set; }
-        private int RecoveryScore { get; set; }
-        private string Status { get; set; }
-        private string HousingUnit { get; set; }
+        public string AnimalID { get; set; }
+        public string Name { get; set; }
+        public string Species { get; set; }
+        public int Age { get; set; }
+        public int RecoveryScore { get; set; }
+        public string Status { get; set; }
+        public string HousingUnit { get; set; }
 
         public string ConvertAnimal(string id, string name, string species, int age, int recoveryScore, string status, string housingUnit)
         {
@@ -30,10 +30,10 @@ namespace PRG282_Project_BaobabRidge
         }
 
         //this method will be used to check that ecery ID entered is unique and it will caluclate the amount of lines skipped when doing the validation
-        public (List<Animals> Animals, int Skipped) LoadAnimals()
+        public (List<Animal> Animals, int Skipped) LoadAnimals()
         {
             int skipped = 0;
-            List<Animals> animals = new List<Animals>();
+            List<Animal> animals = new List<Animal>();
 
             //create a path
             string path = Path.Combine(AppContext.BaseDirectory, "animals.txt");
@@ -81,7 +81,7 @@ namespace PRG282_Project_BaobabRidge
                     }
 
                     //if all of the above code has run and none of these tests were false, the line is valid and we can the build the object
-                    animals.Add(new Animals
+                    animals.Add(new Animal
                     {
                         AnimalID = id,
                         Name = parts[1],
