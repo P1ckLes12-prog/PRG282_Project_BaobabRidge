@@ -129,6 +129,7 @@
             btnAddAnimal.TabIndex = 10;
             btnAddAnimal.Text = "Add";
             btnAddAnimal.UseVisualStyleBackColor = true;
+            btnAddAnimal.Click += btnAddAnimal_Click;
             // 
             // frmAddAnimal
             // 
@@ -148,6 +149,7 @@
             Controls.Add(lblAnimalID);
             Name = "frmAddAnimal";
             Text = "Add New Animal";
+            Load += frmAddAnimal_Load;
             ResumeLayout(false);
             PerformLayout();
         }
