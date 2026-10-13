@@ -6,5 +6,11 @@ namespace PRG282_Project_BaobabRidge
         {
             InitializeComponent();
         }
+
+        private void btnGoToAdd_Click(object sender, EventArgs e)
+        {
+            frmAddAnimal addAnimal = new frmAddAnimal();
+            addAnimal.Show();
+        }
     }
 }

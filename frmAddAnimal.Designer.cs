@@ -149,7 +149,6 @@
             Controls.Add(lblAnimalID);
             Name = "frmAddAnimal";
             Text = "Add New Animal";
-            Load += frmAddAnimal_Load;
             ResumeLayout(false);
             PerformLayout();
         }

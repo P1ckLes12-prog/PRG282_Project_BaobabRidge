@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            btnGoToAdd = new Button();
+            SuspendLayout();
+            // 
+            // btnGoToAdd
+            // 
+            btnGoToAdd.Location = new Point(295, 320);
+            btnGoToAdd.Name = "btnGoToAdd";
+            btnGoToAdd.Size = new Size(159, 37);
+            btnGoToAdd.TabIndex = 0;
+            btnGoToAdd.Text = "Add Animal";
+            btnGoToAdd.UseVisualStyleBackColor = true;
+            btnGoToAdd.Click += btnGoToAdd_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnGoToAdd);
+            Name = "Form1";
             Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnGoToAdd;
     }
 }
