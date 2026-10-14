@@ -34,15 +34,16 @@
             btnView = new Button();
             btnDelete = new Button();
             btnSOV = new Button();
+            dgvAnimals = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvAnimals).BeginInit();
             SuspendLayout();
             // 
             // btnGoToAdd
             // 
             btnGoToAdd.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
-            btnGoToAdd.Location = new Point(69, 58);
-            btnGoToAdd.Margin = new Padding(3, 2, 3, 2);
+            btnGoToAdd.Location = new Point(149, 248);
             btnGoToAdd.Name = "btnGoToAdd";
-            btnGoToAdd.Size = new Size(139, 28);
+            btnGoToAdd.Size = new Size(98, 37);
             btnGoToAdd.TabIndex = 0;
             btnGoToAdd.Text = "Add Animal";
             btnGoToAdd.UseVisualStyleBackColor = true;
@@ -52,18 +53,19 @@
             // 
             lblMainHeader.AutoSize = true;
             lblMainHeader.Font = new Font("Georgia", 16F, FontStyle.Bold);
-            lblMainHeader.Location = new Point(1, 9);
+            lblMainHeader.Location = new Point(1, 12);
             lblMainHeader.Name = "lblMainHeader";
-            lblMainHeader.Size = new Size(494, 27);
+            lblMainHeader.Size = new Size(602, 31);
             lblMainHeader.TabIndex = 1;
             lblMainHeader.Text = "BaobabRidge Animal Management System";
             // 
             // btnUpdateAnimal
             // 
             btnUpdateAnimal.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
-            btnUpdateAnimal.Location = new Point(69, 137);
+            btnUpdateAnimal.Location = new Point(24, 248);
+            btnUpdateAnimal.Margin = new Padding(3, 4, 3, 4);
             btnUpdateAnimal.Name = "btnUpdateAnimal";
-            btnUpdateAnimal.Size = new Size(139, 28);
+            btnUpdateAnimal.Size = new Size(84, 37);
             btnUpdateAnimal.TabIndex = 2;
             btnUpdateAnimal.Text = "Update Animal";
             btnUpdateAnimal.UseVisualStyleBackColor = true;
@@ -72,9 +74,10 @@
             // btnView
             // 
             btnView.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
-            btnView.Location = new Point(289, 58);
+            btnView.Location = new Point(279, 248);
+            btnView.Margin = new Padding(3, 4, 3, 4);
             btnView.Name = "btnView";
-            btnView.Size = new Size(139, 28);
+            btnView.Size = new Size(80, 37);
             btnView.TabIndex = 3;
             btnView.Text = "View";
             btnView.UseVisualStyleBackColor = true;
@@ -82,9 +85,10 @@
             // btnDelete
             // 
             btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
-            btnDelete.Location = new Point(289, 137);
+            btnDelete.Location = new Point(406, 248);
+            btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(139, 28);
+            btnDelete.Size = new Size(74, 37);
             btnDelete.TabIndex = 4;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
@@ -92,27 +96,39 @@
             // btnSOV
             // 
             btnSOV.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
-            btnSOV.Location = new Point(179, 206);
+            btnSOV.Location = new Point(356, 93);
+            btnSOV.Margin = new Padding(3, 4, 3, 4);
             btnSOV.Name = "btnSOV";
-            btnSOV.Size = new Size(139, 28);
+            btnSOV.Size = new Size(159, 37);
             btnSOV.TabIndex = 5;
             btnSOV.Text = "Summary Overview";
             btnSOV.UseVisualStyleBackColor = true;
             // 
+            // dgvAnimals
+            // 
+            dgvAnimals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAnimals.Location = new Point(24, 46);
+            dgvAnimals.Name = "dgvAnimals";
+            dgvAnimals.RowHeadersWidth = 51;
+            dgvAnimals.Size = new Size(268, 139);
+            dgvAnimals.TabIndex = 6;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(494, 246);
+            ClientSize = new Size(565, 328);
+            Controls.Add(dgvAnimals);
             Controls.Add(btnSOV);
             Controls.Add(btnDelete);
             Controls.Add(btnView);
             Controls.Add(btnUpdateAnimal);
             Controls.Add(lblMainHeader);
             Controls.Add(btnGoToAdd);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvAnimals).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -125,5 +141,6 @@
         private Button btnView;
         private Button btnDelete;
         private Button btnSOV;
+        private DataGridView dgvAnimals;
     }
 }
