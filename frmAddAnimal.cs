@@ -33,7 +33,7 @@ namespace PRG282_Project_BaobabRidge
                 txtAnimalID.Focus();
                 return;
             }
-            
+
             //ensure the name ans species have 30 characters and no '|'
             if (Name.Contains("|") || Name.Length <= 0 || Name.Length > 30)
             {
@@ -118,6 +118,12 @@ namespace PRG282_Project_BaobabRidge
                 MessageBox.Show($"The file is in use by another program", "File error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Form1().Show();
         }
     }
 }

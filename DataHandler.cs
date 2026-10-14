@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.IO;
 using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PRG282_Project_BaobabRidge
 {
@@ -92,5 +93,38 @@ namespace PRG282_Project_BaobabRidge
             string prefix = (existing.Length > 0 && !existing.EndsWith("\n")) ? Environment.NewLine : "";
             File.AppendAllText(path, prefix + animal.ConvertAnimal() + Environment.NewLine);
         }
+
+        public string[] UpdateAnimal(string AnimalID, string AnimalName, string species, int Age, int RecoveryScore)
+        {
+            EnsureFileExists();
+            string[] lines = File.ReadAllLines(path);
+
+            Animal obj = new Animal
+            {
+                AnimalID = AnimalID,
+                Name = AnimalName,
+                Species = species,
+                Age = Age,
+                RecoveryScore = RecoveryScore,
+                Status = Animal.ClassifyRecoveryScore(RecoveryScore).Item1,
+                HousingUnit = Animal.ClassifyRecoveryScore(RecoveryScore).Item2
+            };
+
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                string[] parts = lines[i].Split('|');
+                if (parts.Length == 7 && parts[0].ToUpper() == AnimalID.ToUpper())
+                {
+                    lines[i] = $"{obj.AnimalID}|{obj.Name}|{obj.Species}|{obj.Age}|{obj.RecoveryScore}|{obj.Status}|{obj.HousingUnit}";
+                    break;
+                }
+            }
+            File.WriteAllLines(path, lines);
+            return lines;
+        }
+
+
+
     }
 }
