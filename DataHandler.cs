@@ -124,7 +124,49 @@ namespace PRG282_Project_BaobabRidge
             return lines;
         }
 
+        //this method will delet a line in the file id the animal id matches the id that a user will give in the form
+        public void DeleteAnimal(string id)
+        {
+            EnsureFileExists();
+            List<string> newFile = new List<string>();
 
+            bool found = false;
+            try
+            {
+                using (StreamReader reader = new StreamReader(path))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        string[] part = line.Split('|');
+
+                        if (part[0] == id)
+                        {
+                            found = true;
+                        }
+                        else
+                        {
+                            newFile.Add(line);
+                        }
+                    }
+
+                }
+                if (found)
+                {
+                    File.WriteAllLines(path, newFile);
+                    MessageBox.Show("Animal deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show($"Animal with id {id} could not be found", "Invalid data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error occured: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
     }
 }
