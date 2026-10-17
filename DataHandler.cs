@@ -125,14 +125,15 @@ namespace PRG282_Project_BaobabRidge
         }
 
         //this method will delet a line in the file id the animal id matches the id that a user will give in the form
-        public void DeleteAnimal(string id)
+        public bool DeleteAnimal(string id)
         {
-            EnsureFileExists();
             List<string> newFile = new List<string>();
 
             bool found = false;
             try
             {
+                EnsureFileExists();
+
                 using (StreamReader reader = new StreamReader(path))
                 {
                     string line;
@@ -154,17 +155,27 @@ namespace PRG282_Project_BaobabRidge
                 if (found)
                 {
                     File.WriteAllLines(path, newFile);
-                    MessageBox.Show("Animal deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
                 }
                 else
                 {
-                    MessageBox.Show($"Animal with id {id} could not be found", "Invalid data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
-
             }
-            catch (Exception ex)
+            catch (UnauthorizedAccessException)
             {
-                MessageBox.Show($"Error occured: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("The animal file is read-only or you don't have permission to change it.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("The animal file is in use by another program. Close it and try again.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
 

@@ -1,3 +1,5 @@
+using System.Xml.Linq;
+
 namespace PRG282_Project_BaobabRidge
 {
     public partial class Form1 : Form
@@ -39,21 +41,34 @@ namespace PRG282_Project_BaobabRidge
             }
 
             string id = dgvAnimals.CurrentRow.Cells[0].Value?.ToString();
+            string name = dgvAnimals.CurrentRow.Cells[1].Value?.ToString();
 
-            if(string.IsNullOrEmpty(id) )
+
+            if (string.IsNullOrEmpty(id) )
             {
                 return;
             }
 
-            var confirm = MessageBox.Show($"Are you sure you want to delete animal with id {id}?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var confirm = MessageBox.Show($"Delete {id} ({name})? This cannot be undone.", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (confirm == DialogResult.Yes)
             {
-                dth.DeleteAnimal(id);
-                List<Animal> animals = dth.LoadAnimals().Animals;
-                BindingSource binding = new BindingSource();
-                binding.DataSource = animals;
-                dgvAnimals.DataSource = binding;
+                bool deleted = dth.DeleteAnimal(id);
+
+                if (deleted)
+                {
+                    MessageBox.Show("Animal deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    List<Animal> animals = dth.LoadAnimals().Animals;
+                    BindingSource binding = new BindingSource();
+                    binding.DataSource = animals;
+                    dgvAnimals.DataSource = binding;
+                }
+                else
+                {
+                    MessageBox.Show($"Animal with id {id} could not be found", "Invalid data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
         }
     }
