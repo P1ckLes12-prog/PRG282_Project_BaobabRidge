@@ -27,5 +27,34 @@ namespace PRG282_Project_BaobabRidge
         {
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DataHandler dth = new DataHandler();
+
+            if(dgvAnimals.CurrentRow == null)
+            {
+                MessageBox.Show("Please select a row first", "No selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string id = dgvAnimals.CurrentRow.Cells[0].Value?.ToString();
+
+            if(string.IsNullOrEmpty(id) )
+            {
+                return;
+            }
+
+            var confirm = MessageBox.Show($"Are you sure you want to delete animal with id {id}?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm == DialogResult.Yes)
+            {
+                dth.DeleteAnimal(id);
+                List<Animal> animals = dth.LoadAnimals().Animals;
+                BindingSource binding = new BindingSource();
+                binding.DataSource = animals;
+                dgvAnimals.DataSource = binding;
+            }
+        }
     }
 }

@@ -92,6 +92,7 @@
             btnDelete.TabIndex = 4;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnSOV
             // 
@@ -117,7 +118,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(565, 328);
+            ClientSize = new Size(610, 328);
             Controls.Add(dgvAnimals);
             Controls.Add(btnSOV);
             Controls.Add(btnDelete);
