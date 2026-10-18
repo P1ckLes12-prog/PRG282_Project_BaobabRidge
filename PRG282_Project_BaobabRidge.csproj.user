@@ -8,6 +8,9 @@
     <Compile Update="frmAddAnimal.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmDeleteAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmUpdateAnimal.cs">
       <SubType>Form</SubType>
     </Compile>

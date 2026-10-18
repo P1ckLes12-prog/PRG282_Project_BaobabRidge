@@ -16,6 +16,7 @@ namespace PRG282_Project_BaobabRidge
         {
             frmAddAnimal addAnimal = new frmAddAnimal();
             addAnimal.Show();
+            this.Hide();
         }
 
         private void btnUpdateAnimal_Click(object sender, EventArgs e)
@@ -32,44 +33,9 @@ namespace PRG282_Project_BaobabRidge
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DataHandler dth = new DataHandler();
-
-            if(dgvAnimals.CurrentRow == null)
-            {
-                MessageBox.Show("Please select a row first", "No selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            string id = dgvAnimals.CurrentRow.Cells[0].Value?.ToString();
-            string name = dgvAnimals.CurrentRow.Cells[1].Value?.ToString();
-
-
-            if (string.IsNullOrEmpty(id) )
-            {
-                return;
-            }
-
-            var confirm = MessageBox.Show($"Delete {id} ({name})? This cannot be undone.", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (confirm == DialogResult.Yes)
-            {
-                bool deleted = dth.DeleteAnimal(id);
-
-                if (deleted)
-                {
-                    MessageBox.Show("Animal deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    List<Animal> animals = dth.LoadAnimals().Animals;
-                    BindingSource binding = new BindingSource();
-                    binding.DataSource = animals;
-                    dgvAnimals.DataSource = binding;
-                }
-                else
-                {
-                    MessageBox.Show($"Animal with id {id} could not be found", "Invalid data", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
+            frmDeleteAnimal delete = new frmDeleteAnimal();
+            this.Hide();
+            delete.Show();
         }
     }
 }

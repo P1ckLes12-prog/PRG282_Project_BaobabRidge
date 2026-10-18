@@ -42,8 +42,9 @@
             // 
             btnGoToAdd.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
             btnGoToAdd.Location = new Point(149, 248);
+            btnGoToAdd.Margin = new Padding(3, 4, 3, 4);
             btnGoToAdd.Name = "btnGoToAdd";
-            btnGoToAdd.Size = new Size(98, 37);
+            btnGoToAdd.Size = new Size(80, 37);
             btnGoToAdd.TabIndex = 0;
             btnGoToAdd.Text = "Add Animal";
             btnGoToAdd.UseVisualStyleBackColor = true;
@@ -65,7 +66,7 @@
             btnUpdateAnimal.Location = new Point(24, 248);
             btnUpdateAnimal.Margin = new Padding(3, 4, 3, 4);
             btnUpdateAnimal.Name = "btnUpdateAnimal";
-            btnUpdateAnimal.Size = new Size(84, 37);
+            btnUpdateAnimal.Size = new Size(80, 37);
             btnUpdateAnimal.TabIndex = 2;
             btnUpdateAnimal.Text = "Update Animal";
             btnUpdateAnimal.UseVisualStyleBackColor = true;
@@ -88,7 +89,7 @@
             btnDelete.Location = new Point(406, 248);
             btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(74, 37);
+            btnDelete.Size = new Size(80, 37);
             btnDelete.TabIndex = 4;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
