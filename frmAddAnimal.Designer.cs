@@ -46,94 +46,89 @@
             // lblAnimalID
             // 
             lblAnimalID.AutoSize = true;
-            lblAnimalID.Location = new Point(38, 66);
+            lblAnimalID.Location = new Point(43, 88);
             lblAnimalID.Name = "lblAnimalID";
-            lblAnimalID.Size = new Size(62, 15);
+            lblAnimalID.Size = new Size(78, 20);
             lblAnimalID.TabIndex = 0;
             lblAnimalID.Text = "Animal ID:";
             // 
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(38, 91);
+            lblName.Location = new Point(43, 121);
             lblName.Name = "lblName";
-            lblName.Size = new Size(42, 15);
+            lblName.Size = new Size(52, 20);
             lblName.TabIndex = 1;
             lblName.Text = "Name:";
             // 
             // lblSpecies
             // 
             lblSpecies.AutoSize = true;
-            lblSpecies.Location = new Point(38, 115);
+            lblSpecies.Location = new Point(43, 153);
             lblSpecies.Name = "lblSpecies";
-            lblSpecies.Size = new Size(49, 15);
+            lblSpecies.Size = new Size(62, 20);
             lblSpecies.TabIndex = 2;
             lblSpecies.Text = "Species:";
             // 
             // lblAge
             // 
             lblAge.AutoSize = true;
-            lblAge.Location = new Point(38, 140);
+            lblAge.Location = new Point(43, 187);
             lblAge.Name = "lblAge";
-            lblAge.Size = new Size(66, 15);
+            lblAge.Size = new Size(83, 20);
             lblAge.TabIndex = 3;
             lblAge.Text = "Age(years):";
             // 
             // lblRecoveryScore
             // 
             lblRecoveryScore.AutoSize = true;
-            lblRecoveryScore.Location = new Point(38, 165);
+            lblRecoveryScore.Location = new Point(43, 220);
             lblRecoveryScore.Name = "lblRecoveryScore";
-            lblRecoveryScore.Size = new Size(90, 15);
+            lblRecoveryScore.Size = new Size(113, 20);
             lblRecoveryScore.TabIndex = 4;
             lblRecoveryScore.Text = "Recovery Score:";
             // 
             // txtAnimalID
             // 
-            txtAnimalID.Location = new Point(168, 64);
-            txtAnimalID.Margin = new Padding(3, 2, 3, 2);
+            txtAnimalID.Location = new Point(192, 85);
             txtAnimalID.Name = "txtAnimalID";
-            txtAnimalID.Size = new Size(187, 23);
+            txtAnimalID.Size = new Size(213, 27);
             txtAnimalID.TabIndex = 5;
             // 
             // txtName
             // 
-            txtName.Location = new Point(168, 89);
-            txtName.Margin = new Padding(3, 2, 3, 2);
+            txtName.Location = new Point(192, 119);
             txtName.Name = "txtName";
-            txtName.Size = new Size(187, 23);
+            txtName.Size = new Size(213, 27);
             txtName.TabIndex = 6;
             // 
             // txtSpecies
             // 
-            txtSpecies.Location = new Point(168, 113);
-            txtSpecies.Margin = new Padding(3, 2, 3, 2);
+            txtSpecies.Location = new Point(192, 151);
             txtSpecies.Name = "txtSpecies";
-            txtSpecies.Size = new Size(187, 23);
+            txtSpecies.Size = new Size(213, 27);
             txtSpecies.TabIndex = 7;
             // 
             // txtAge
             // 
-            txtAge.Location = new Point(168, 138);
-            txtAge.Margin = new Padding(3, 2, 3, 2);
+            txtAge.Location = new Point(192, 184);
             txtAge.Name = "txtAge";
-            txtAge.Size = new Size(187, 23);
+            txtAge.Size = new Size(213, 27);
             txtAge.TabIndex = 8;
             // 
             // txtScore
             // 
-            txtScore.Location = new Point(168, 163);
-            txtScore.Margin = new Padding(3, 2, 3, 2);
+            txtScore.Location = new Point(192, 217);
             txtScore.Name = "txtScore";
-            txtScore.Size = new Size(187, 23);
+            txtScore.Size = new Size(213, 27);
             txtScore.TabIndex = 9;
             // 
             // btnAddAnimal
             // 
-            btnAddAnimal.Location = new Point(129, 220);
-            btnAddAnimal.Margin = new Padding(3, 2, 3, 2);
+            btnAddAnimal.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
+            btnAddAnimal.Location = new Point(62, 277);
             btnAddAnimal.Name = "btnAddAnimal";
-            btnAddAnimal.Size = new Size(82, 22);
+            btnAddAnimal.Size = new Size(94, 29);
             btnAddAnimal.TabIndex = 10;
             btnAddAnimal.Text = "Add";
             btnAddAnimal.UseVisualStyleBackColor = true;
@@ -143,17 +138,19 @@
             // 
             lblAddHeader.AutoSize = true;
             lblAddHeader.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            lblAddHeader.Location = new Point(99, 20);
+            lblAddHeader.Location = new Point(113, 27);
             lblAddHeader.Name = "lblAddHeader";
-            lblAddHeader.Size = new Size(165, 30);
+            lblAddHeader.Size = new Size(206, 37);
             lblAddHeader.TabIndex = 11;
             lblAddHeader.Text = "Add an Animal";
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(290, 232);
+            btnBack.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
+            btnBack.Location = new Point(279, 277);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(75, 23);
+            btnBack.Size = new Size(86, 31);
             btnBack.TabIndex = 12;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
@@ -161,9 +158,9 @@
             // 
             // frmAddAnimal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(377, 267);
+            ClientSize = new Size(431, 356);
             Controls.Add(btnBack);
             Controls.Add(lblAddHeader);
             Controls.Add(btnAddAnimal);
@@ -177,7 +174,8 @@
             Controls.Add(lblSpecies);
             Controls.Add(lblName);
             Controls.Add(lblAnimalID);
-            Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmAddAnimal";
             Text = "Add New Animal";
             ResumeLayout(false);
