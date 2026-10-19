@@ -7,9 +7,6 @@ namespace PRG282_Project_BaobabRidge
         public Form1()
         {
             InitializeComponent();
-            DataHandler handler = new DataHandler();
-            var result = handler.LoadAnimals();
-            dgvAnimals.DataSource = result.Animals;
         }
 
         private void btnGoToAdd_Click(object sender, EventArgs e)
@@ -36,6 +33,17 @@ namespace PRG282_Project_BaobabRidge
             frmDeleteAnimal delete = new frmDeleteAnimal();
             this.Hide();
             delete.Show();
+        }
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmSummary().Show();
+        }
+
+        private void btnSOV_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmViewAnimals().Show();
         }
     }
 }
