@@ -11,7 +11,13 @@
     <Compile Update="frmDeleteAnimal.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmUpdateAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmViewAnimals.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
