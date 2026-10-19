@@ -37,17 +37,20 @@
             // dgvViewAnimals
             // 
             dgvViewAnimals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvViewAnimals.Location = new Point(31, 36);
+            dgvViewAnimals.Location = new Point(35, 48);
+            dgvViewAnimals.Margin = new Padding(3, 4, 3, 4);
             dgvViewAnimals.Name = "dgvViewAnimals";
-            dgvViewAnimals.Size = new Size(697, 305);
+            dgvViewAnimals.RowHeadersWidth = 51;
+            dgvViewAnimals.Size = new Size(797, 407);
             dgvViewAnimals.TabIndex = 0;
             // 
             // btnBack
             // 
-            btnBack.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(348, 360);
+            btnBack.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnBack.Location = new Point(378, 463);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(75, 23);
+            btnBack.Size = new Size(86, 31);
             btnBack.TabIndex = 1;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
@@ -57,23 +60,26 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = SystemColors.Control;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(317, 9);
+            label1.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            label1.Location = new Point(301, 7);
             label1.Name = "label1";
-            label1.Size = new Size(141, 21);
+            label1.Size = new Size(258, 37);
             label1.TabIndex = 2;
             label1.Text = "All Animals in Care";
             // 
             // frmViewAnimals
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(770, 395);
+            ClientSize = new Size(880, 504);
             Controls.Add(label1);
             Controls.Add(btnBack);
             Controls.Add(dgvViewAnimals);
+            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmViewAnimals";
-            Text = "frmViewAnimals";
+            Text = "BaobabRidge - View";
             Load += frmViewAnimals_Load;
             ((System.ComponentModel.ISupportInitialize)dgvViewAnimals).EndInit();
             ResumeLayout(false);

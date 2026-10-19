@@ -43,17 +43,17 @@ namespace PRG282_Project_BaobabRidge
                     else if (animal.Status == "Release-Ready") rel++;
                 }
             }
-
+            
             //Display on the form
-            label1.Text = $"Total Animals: {total}";
-            label2.Text = total > 0 ? $"Average Age: {avgAge.ToString("F2", CultureInfo.InvariantCulture)}" : "Average Age: N/A";
-            label3.Text = total > 0 ? $"Average Score: {avgScore.ToString("F2", CultureInfo.InvariantCulture)}" : "Average Score: N/A";
-            label4.Text = $"Critical: {crit}";
-            label5.Text = $"Serious: {ser}";
-            label6.Text = $"Stable: {stab}";
-            label7.Text = $"Recovering: {rec}";
-            label8.Text = $"Release-Ready: {rel}";
-
+            lblTotal.Text = $"{total}";
+            lblAge.Text = total > 0 ? $"{avgAge.ToString("F2", CultureInfo.InvariantCulture)}" : "N/A";
+            lblScore.Text = total > 0 ? $"{avgScore.ToString("F2", CultureInfo.InvariantCulture)}" : "N/A";
+            lblCritical.Text = $"{crit}";
+            lblSerious.Text = $"{ser}";
+            lblStable.Text = $"{stab}";
+            lblRecovering.Text = $"{rec}";
+            lblRelease.Text = $"{rel}";
+            
             //Write to summary.txt
             try
             {

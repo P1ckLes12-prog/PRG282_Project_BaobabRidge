@@ -39,9 +39,10 @@
             // btnGoToAdd
             // 
             btnGoToAdd.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
-            btnGoToAdd.Location = new Point(121, 61);
+            btnGoToAdd.Location = new Point(196, 81);
+            btnGoToAdd.Margin = new Padding(3, 4, 3, 4);
             btnGoToAdd.Name = "btnGoToAdd";
-            btnGoToAdd.Size = new Size(70, 28);
+            btnGoToAdd.Size = new Size(80, 37);
             btnGoToAdd.TabIndex = 0;
             btnGoToAdd.Text = "Add Animal";
             btnGoToAdd.UseVisualStyleBackColor = true;
@@ -51,18 +52,19 @@
             // 
             lblMainHeader.AutoSize = true;
             lblMainHeader.Font = new Font("Georgia", 16F, FontStyle.Bold);
-            lblMainHeader.Location = new Point(1, 9);
+            lblMainHeader.Location = new Point(1, 12);
             lblMainHeader.Name = "lblMainHeader";
-            lblMainHeader.Size = new Size(494, 27);
+            lblMainHeader.Size = new Size(602, 31);
             lblMainHeader.TabIndex = 1;
             lblMainHeader.Text = "BaobabRidge Animal Management System";
             // 
             // btnUpdateAnimal
             // 
             btnUpdateAnimal.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
-            btnUpdateAnimal.Location = new Point(78, 126);
+            btnUpdateAnimal.Location = new Point(315, 81);
+            btnUpdateAnimal.Margin = new Padding(3, 4, 3, 4);
             btnUpdateAnimal.Name = "btnUpdateAnimal";
-            btnUpdateAnimal.Size = new Size(70, 28);
+            btnUpdateAnimal.Size = new Size(80, 37);
             btnUpdateAnimal.TabIndex = 2;
             btnUpdateAnimal.Text = "Update Animal";
             btnUpdateAnimal.UseVisualStyleBackColor = true;
@@ -71,9 +73,10 @@
             // btnView
             // 
             btnView.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
-            btnView.Location = new Point(344, 61);
+            btnView.Location = new Point(196, 146);
+            btnView.Margin = new Padding(3, 4, 3, 4);
             btnView.Name = "btnView";
-            btnView.Size = new Size(70, 28);
+            btnView.Size = new Size(80, 37);
             btnView.TabIndex = 3;
             btnView.Text = "View";
             btnView.UseVisualStyleBackColor = true;
@@ -82,9 +85,10 @@
             // btnDelete
             // 
             btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
-            btnDelete.Location = new Point(379, 126);
+            btnDelete.Location = new Point(315, 146);
+            btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(70, 28);
+            btnDelete.Size = new Size(80, 37);
             btnDelete.TabIndex = 4;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
@@ -93,9 +97,10 @@
             // btnSOV
             // 
             btnSOV.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
-            btnSOV.Location = new Point(183, 197);
+            btnSOV.Location = new Point(196, 211);
+            btnSOV.Margin = new Padding(3, 4, 3, 4);
             btnSOV.Name = "btnSOV";
-            btnSOV.Size = new Size(139, 28);
+            btnSOV.Size = new Size(199, 37);
             btnSOV.TabIndex = 5;
             btnSOV.Text = "Summary Overview";
             btnSOV.UseVisualStyleBackColor = true;
@@ -103,18 +108,19 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(534, 246);
+            ClientSize = new Size(610, 328);
             Controls.Add(btnSOV);
             Controls.Add(btnDelete);
             Controls.Add(btnView);
             Controls.Add(btnUpdateAnimal);
             Controls.Add(lblMainHeader);
             Controls.Add(btnGoToAdd);
-            Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Form1";
-            Text = "Form1";
+            Text = "BaobabRidge - Main";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();

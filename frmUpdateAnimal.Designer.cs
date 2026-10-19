@@ -52,10 +52,10 @@
             // 
             lblUpdateHeader.AutoSize = true;
             lblUpdateHeader.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            lblUpdateHeader.Location = new Point(233, 9);
-            lblUpdateHeader.Margin = new Padding(4, 0, 4, 0);
+            lblUpdateHeader.Location = new Point(266, 12);
+            lblUpdateHeader.Margin = new Padding(5, 0, 5, 0);
             lblUpdateHeader.Name = "lblUpdateHeader";
-            lblUpdateHeader.Size = new Size(287, 30);
+            lblUpdateHeader.Size = new Size(357, 37);
             lblUpdateHeader.TabIndex = 0;
             lblUpdateHeader.Text = "Update an Animals Record";
             // 
@@ -63,10 +63,10 @@
             // 
             lbl1.AutoSize = true;
             lbl1.Font = new Font("Segoe UI", 9F, FontStyle.Italic);
-            lbl1.Location = new Point(17, 42);
+            lbl1.Location = new Point(19, 56);
             lbl1.Margin = new Padding(2, 0, 2, 0);
             lbl1.Name = "lbl1";
-            lbl1.Size = new Size(57, 15);
+            lbl1.Size = new Size(70, 20);
             lbl1.TabIndex = 1;
             lbl1.Text = "AnimalID";
             // 
@@ -74,10 +74,10 @@
             // 
             lbl2.AutoSize = true;
             lbl2.Font = new Font("Segoe UI", 9F, FontStyle.Italic);
-            lbl2.Location = new Point(17, 66);
+            lbl2.Location = new Point(19, 88);
             lbl2.Margin = new Padding(2, 0, 2, 0);
             lbl2.Name = "lbl2";
-            lbl2.Size = new Size(39, 15);
+            lbl2.Size = new Size(48, 20);
             lbl2.TabIndex = 2;
             lbl2.Text = "Name";
             // 
@@ -85,10 +85,10 @@
             // 
             lbl3.AutoSize = true;
             lbl3.Font = new Font("Segoe UI", 9F, FontStyle.Italic);
-            lbl3.Location = new Point(17, 96);
+            lbl3.Location = new Point(19, 128);
             lbl3.Margin = new Padding(2, 0, 2, 0);
             lbl3.Name = "lbl3";
-            lbl3.Size = new Size(45, 15);
+            lbl3.Size = new Size(55, 20);
             lbl3.TabIndex = 3;
             lbl3.Text = "Species";
             // 
@@ -96,10 +96,10 @@
             // 
             lbl4.AutoSize = true;
             lbl4.Font = new Font("Segoe UI", 9F, FontStyle.Italic);
-            lbl4.Location = new Point(17, 123);
+            lbl4.Location = new Point(19, 164);
             lbl4.Margin = new Padding(2, 0, 2, 0);
             lbl4.Name = "lbl4";
-            lbl4.Size = new Size(64, 15);
+            lbl4.Size = new Size(76, 20);
             lbl4.TabIndex = 4;
             lbl4.Text = "Age(years)";
             // 
@@ -107,65 +107,65 @@
             // 
             lbl5.AutoSize = true;
             lbl5.Font = new Font("Segoe UI", 9F, FontStyle.Italic);
-            lbl5.Location = new Point(17, 153);
+            lbl5.Location = new Point(19, 204);
             lbl5.Margin = new Padding(2, 0, 2, 0);
             lbl5.Name = "lbl5";
-            lbl5.Size = new Size(82, 15);
+            lbl5.Size = new Size(103, 20);
             lbl5.TabIndex = 5;
             lbl5.Text = "Recovery score";
             // 
             // txtAnimalID
             // 
             txtAnimalID.Font = new Font("Segoe UI", 9F);
-            txtAnimalID.Location = new Point(117, 39);
-            txtAnimalID.Margin = new Padding(2);
+            txtAnimalID.Location = new Point(134, 52);
+            txtAnimalID.Margin = new Padding(2, 3, 2, 3);
             txtAnimalID.Name = "txtAnimalID";
-            txtAnimalID.Size = new Size(175, 23);
+            txtAnimalID.Size = new Size(199, 27);
             txtAnimalID.TabIndex = 6;
             // 
             // txtName
             // 
             txtName.Font = new Font("Segoe UI", 9F);
-            txtName.Location = new Point(117, 66);
-            txtName.Margin = new Padding(2);
+            txtName.Location = new Point(134, 88);
+            txtName.Margin = new Padding(2, 3, 2, 3);
             txtName.Name = "txtName";
-            txtName.Size = new Size(175, 23);
+            txtName.Size = new Size(199, 27);
             txtName.TabIndex = 7;
             // 
             // txtSpecies
             // 
             txtSpecies.Font = new Font("Segoe UI", 9F);
-            txtSpecies.Location = new Point(117, 96);
-            txtSpecies.Margin = new Padding(2);
+            txtSpecies.Location = new Point(134, 128);
+            txtSpecies.Margin = new Padding(2, 3, 2, 3);
             txtSpecies.Name = "txtSpecies";
-            txtSpecies.Size = new Size(175, 23);
+            txtSpecies.Size = new Size(199, 27);
             txtSpecies.TabIndex = 8;
             // 
             // txtAge
             // 
             txtAge.Font = new Font("Segoe UI", 9F);
-            txtAge.Location = new Point(117, 123);
-            txtAge.Margin = new Padding(2);
+            txtAge.Location = new Point(134, 164);
+            txtAge.Margin = new Padding(2, 3, 2, 3);
             txtAge.Name = "txtAge";
-            txtAge.Size = new Size(175, 23);
+            txtAge.Size = new Size(199, 27);
             txtAge.TabIndex = 9;
             // 
             // txtRecoveryScore
             // 
             txtRecoveryScore.Font = new Font("Segoe UI", 9F);
-            txtRecoveryScore.Location = new Point(117, 150);
-            txtRecoveryScore.Margin = new Padding(2);
+            txtRecoveryScore.Location = new Point(134, 200);
+            txtRecoveryScore.Margin = new Padding(2, 3, 2, 3);
             txtRecoveryScore.Name = "txtRecoveryScore";
-            txtRecoveryScore.Size = new Size(175, 23);
+            txtRecoveryScore.Size = new Size(199, 27);
             txtRecoveryScore.TabIndex = 10;
             // 
             // btnUpdate
             // 
             btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnUpdate.Location = new Point(117, 187);
-            btnUpdate.Margin = new Padding(2);
+            btnUpdate.Location = new Point(134, 249);
+            btnUpdate.Margin = new Padding(2, 3, 2, 3);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(65, 24);
+            btnUpdate.Size = new Size(74, 32);
             btnUpdate.TabIndex = 11;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -190,19 +190,21 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvDisp.DefaultCellStyle = dataGridViewCellStyle2;
-            dgvDisp.Location = new Point(331, 44);
-            dgvDisp.Margin = new Padding(2);
+            dgvDisp.Location = new Point(378, 59);
+            dgvDisp.Margin = new Padding(2, 3, 2, 3);
             dgvDisp.Name = "dgvDisp";
-            dgvDisp.Size = new Size(435, 129);
+            dgvDisp.RowHeadersWidth = 51;
+            dgvDisp.Size = new Size(497, 172);
             dgvDisp.TabIndex = 12;
             dgvDisp.CellClick += dgvDisp_CellClick;
             // 
             // btnDispAll
             // 
             btnDispAll.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnDispAll.Location = new Point(473, 188);
+            btnDispAll.Location = new Point(541, 251);
+            btnDispAll.Margin = new Padding(3, 4, 3, 4);
             btnDispAll.Name = "btnDispAll";
-            btnDispAll.Size = new Size(130, 23);
+            btnDispAll.Size = new Size(149, 31);
             btnDispAll.TabIndex = 13;
             btnDispAll.Text = "DisplayAll/Refresh";
             btnDispAll.UseVisualStyleBackColor = true;
@@ -211,9 +213,10 @@
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            btnBack.Location = new Point(701, 213);
+            btnBack.Location = new Point(789, 251);
+            btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(75, 23);
+            btnBack.Size = new Size(86, 31);
             btnBack.TabIndex = 14;
             btnBack.Text = "BACK";
             btnBack.UseVisualStyleBackColor = true;
@@ -221,9 +224,9 @@
             // 
             // frmUpdateAnimal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(777, 238);
+            ClientSize = new Size(888, 317);
             Controls.Add(btnBack);
             Controls.Add(btnDispAll);
             Controls.Add(dgvDisp);
@@ -240,9 +243,11 @@
             Controls.Add(lbl1);
             Controls.Add(lblUpdateHeader);
             Font = new Font("Segoe UI", 9F);
-            Margin = new Padding(4, 3, 4, 3);
+            Margin = new Padding(5, 4, 5, 4);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmUpdateAnimal";
-            Text = "Update Animal";
+            Text = "BaobabRidge - Update";
             ((System.ComponentModel.ISupportInitialize)dgvDisp).EndInit();
             ResumeLayout(false);
             PerformLayout();
