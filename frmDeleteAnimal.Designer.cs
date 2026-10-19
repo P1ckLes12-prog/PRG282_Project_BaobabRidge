@@ -38,16 +38,16 @@
             // lblDeleteHeading
             // 
             lblDeleteHeading.AutoSize = true;
-            lblDeleteHeading.Font = new Font("Georgia", 16F, FontStyle.Bold);
+            lblDeleteHeading.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             lblDeleteHeading.Location = new Point(145, 9);
             lblDeleteHeading.Name = "lblDeleteHeading";
-            lblDeleteHeading.Size = new Size(533, 31);
+            lblDeleteHeading.Size = new Size(504, 37);
             lblDeleteHeading.TabIndex = 0;
             lblDeleteHeading.Text = "Delete an Animal by selecting the row";
             // 
             // btnDelete
             // 
-            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
+            btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnDelete.Location = new Point(202, 293);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(94, 29);
@@ -58,7 +58,7 @@
             // 
             // btnBack
             // 
-            btnBack.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
+            btnBack.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnBack.Location = new Point(495, 293);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(94, 29);
@@ -88,7 +88,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmDeleteAnimal";
-            Text = "Delete Animal";
+            Text = "BaobabRidge - Delete";
             Load += frmDeleteAnimal_Load;
             ((System.ComponentModel.ISupportInitialize)dgvDeleteDisplay).EndInit();
             ResumeLayout(false);

@@ -125,7 +125,7 @@
             // 
             // btnAddAnimal
             // 
-            btnAddAnimal.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
+            btnAddAnimal.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnAddAnimal.Location = new Point(62, 277);
             btnAddAnimal.Name = "btnAddAnimal";
             btnAddAnimal.Size = new Size(94, 29);
@@ -146,7 +146,7 @@
             // 
             // btnBack
             // 
-            btnBack.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic);
+            btnBack.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnBack.Location = new Point(279, 277);
             btnBack.Margin = new Padding(3, 4, 3, 4);
             btnBack.Name = "btnBack";
@@ -160,7 +160,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(431, 356);
+            ClientSize = new Size(431, 324);
             Controls.Add(btnBack);
             Controls.Add(lblAddHeader);
             Controls.Add(btnAddAnimal);
@@ -177,7 +177,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmAddAnimal";
-            Text = "Add New Animal";
+            Text = "BaobabRidge - Add";
             ResumeLayout(false);
             PerformLayout();
         }
