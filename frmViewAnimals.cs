@@ -22,6 +22,14 @@ namespace PRG282_Project_BaobabRidge
 
             dgvViewAnimals.DataSource = result.Animals;
 
+            dgvViewAnimals.Columns[0].HeaderText = "Animal ID";
+            dgvViewAnimals.Columns[1].HeaderText = "Name";
+            dgvViewAnimals.Columns[2].HeaderText = "Species";
+            dgvViewAnimals.Columns[3].HeaderText = "Age";
+            dgvViewAnimals.Columns[4].HeaderText = "Recovery Score";
+            dgvViewAnimals.Columns[5].HeaderText = "Status";
+            dgvViewAnimals.Columns[6].HeaderText = "Housing Unit";
+
             dgvViewAnimals.ReadOnly = true;
             dgvViewAnimals.AllowUserToAddRows = false;
             dgvViewAnimals.AllowUserToDeleteRows = false;
